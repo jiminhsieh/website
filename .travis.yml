@@ -1,25 +1,28 @@
 # Use Ubuntu 14.04
 dist: trusty
 
-sudo: false
+sudo: required
 
 language: ruby
 
 rvm: 2.2.3
 
 cache:
-  - apt
-  - bundler
+  - apt: true
+  - bundler: true
   - directories:
     - $HOME/.ivy2/cache
 
 jdk:
   - oraclejdk8
 
+
 install:
   - gem install nanoc:4.0.2
   - gem install redcarpet
   - gem install nokogiri
+  - wget https://github.com/jgm/pandoc/releases/download/2.0.5/pandoc-2.0.5-1-amd64.deb && sudo dpkg -i pandoc-2.0.5-1-amd64.deb
+  - sudo tlmgr update --self
 
 addons:
   apt:
@@ -28,7 +31,6 @@ addons:
       - key_url: 'https://bintray.com/user/downloadSubjectPublicKey?username=sbt'
     packages:
       - sbt=1.0.0
-      - pandoc
       - latex-cjk-all
       - texlive-full
 
