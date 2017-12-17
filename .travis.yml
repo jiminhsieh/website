@@ -22,7 +22,7 @@ install:
   - gem install redcarpet
   - gem install nokogiri
   - wget https://github.com/jgm/pandoc/releases/download/2.0.5/pandoc-2.0.5-1-amd64.deb && sudo dpkg -i pandoc-2.0.5-1-amd64.deb
-  - sudo tlmgr update --self
+  - sudo tlmgr update --self --all
 
 addons:
   apt:
