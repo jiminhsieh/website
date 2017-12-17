@@ -93,6 +93,7 @@ ${lines mkString "\n"}""".stripMargin)
   def latexArgs(language: String): Seq[String] =
     language match {
       case "ja" => Seq("-V", "documentclass=ltjarticle", "--pdf-engine=lualatex")
+      case "zh-cn" => Seq("-V", "documentclass=ctexart", "--pdf-engine=xelatex")
       case _    => Seq("--pdf-engine=xelatex")
     }
 
