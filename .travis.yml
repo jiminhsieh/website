@@ -22,7 +22,9 @@ install:
   - gem install redcarpet
   - gem install nokogiri
   - wget https://github.com/jgm/pandoc/releases/download/2.0.5/pandoc-2.0.5-1-amd64.deb && sudo dpkg -i pandoc-2.0.5-1-amd64.deb
-  - sudo tlmgr update --self --all
+  - sudo add-apt-repository ppa:texlive-backports/ppa
+  - sudo apt-get update
+  - sudo apt-get install texlive-full
 
 addons:
   apt:
@@ -32,7 +34,6 @@ addons:
     packages:
       - sbt=1.0.0
       - latex-cjk-all
-      - texlive-full
 
 before_script:
  - export JVM_OPTS="-Dfile.encoding=UTF-8 -Xmx1G -Xms1G -server -XX:ReservedCodeCacheSize=128M"
