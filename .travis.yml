@@ -23,7 +23,7 @@ install:
   - gem install nokogiri
   - wget https://github.com/jgm/pandoc/releases/download/2.0.5/pandoc-2.0.5-1-amd64.deb && sudo dpkg -i pandoc-2.0.5-1-amd64.deb
   - sudo apt-get update
-  - sudo add-apt-repository ppa:jonathonf/texlive-2016
+  - sudo add-apt-repository -y ppa:jonathonf/texlive-2016
   - sudo apt-get update
   - sudo apt-get install -y texlive
 
