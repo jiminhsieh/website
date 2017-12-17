@@ -16,13 +16,12 @@ cache:
 jdk:
   - oraclejdk8
 
-before_install:
-  - wget https://github.com/scottkosty/install-tl-ubuntu/raw/master/install-tl-ubuntu && chmod +x ./install-tl-ubuntu && sudo ./install-tl-ubuntu
+
 install:
   - gem install nanoc:4.0.2
   - gem install redcarpet
   - gem install nokogiri
-  - wget https://github.com/jgm/pandoc/releases/download/2.0.5/pandoc-2.0.5-1-amd64.deb && sudo dpkg -i pandoc-2.0.5-1-amd64.deb
+  - wget https://github.com/jgm/pandoc/releases/download/2.0/pandoc-2.0-3-amd64.deb && sudo dpkg -i pandoc-2.0-3-amd64.deb
 
 addons:
   apt:
