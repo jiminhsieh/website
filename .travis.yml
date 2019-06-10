@@ -33,9 +33,10 @@ addons:
       - texlive-full
 
 before_script:
-  - wget https://github.com/jgm/pandoc/releases/download/2.7.2/pandoc-2.7.2-1-amd64.deb
-  - sudo dpkg -i pandoc-2.7.2-1-amd64.deb
-  - rm pandoc-2.7.2-1-amd64.deb
+  #- wget https://github.com/jgm/pandoc/releases/download/2.7.2/pandoc-2.7.2-1-amd64.deb
+  #- sudo dpkg -i pandoc-2.7.2-1-amd64.deb
+  #- rm pandoc-2.7.2-1-amd64.deb
+  - curl -sL https://github.com/jgm/pandoc/releases/download/2.7.2/pandoc-2.7.2-1-amd64.deb | sudo dpkg -i
   - export JVM_OPTS="-Dfile.encoding=UTF-8 -Xmx1G -Xms1G -server -XX:ReservedCodeCacheSize=128M"
 
 # Use `/usr/bin/sbt` that we manually installed
